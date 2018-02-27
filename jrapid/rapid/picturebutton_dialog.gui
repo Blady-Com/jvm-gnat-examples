@@ -1,0 +1,52 @@
+WINDOW "picturebutton_dialog" "Picturebutton Properties"
+        230        277
+
+WIDGETS
+LABEL label1 0 5 110 20 "Widget name" left default default 
+TEXTENTRY entry1 110 5 100 20
+LABEL label2 0 35 110 20 "X" left default default
+TEXTENTRY entry2 110 35 100 20
+LABEL label3 0 65 110 20 "Y" left default default
+TEXTENTRY entry3 110 65 100 20
+LABEL label4 0 95 110 20 "Width" left default default
+TEXTENTRY entry4 110 95 100 20
+LABEL label5 0 125 110 20 "Height" left default default
+TEXTENTRY entry5 110 125 100 20
+LABEL label6 0 155 110 20 "Action" left default default
+TEXTENTRY entry6 110 155 100 20
+LABEL label8 0 215 110 20 "Tooltip" left default default
+TEXTENTRY entry7 110 185 100 20
+TEXTBUTTON applyButton 20 245 60 20 "Subwindow_Actions.Apply_Properties_Dialog"  "Apply"
+TEXTBUTTON okbutton 90 245 60 20 "Subwindow_Actions.Done_Properties_Dialog"  "OK"
+TEXTBUTTON cancelButton 160 245 60 20 "Subwindow_Actions.Cancel_Properties_Dialog"  "Cancel"
+TEXTENTRY entry8 110 215 100 20
+LABEL label7 0 185 110 20 "Picture" left default default
+ENDOF WIDGETS
+
+ENDOF WINDOW
+WINDOW "picturebutton_dialog" "Picturebutton Properties"
+        230        277
+
+WIDGETS
+LABEL label1 0 5 110 20 "Widget name" left black default 
+TEXTENTRY entry1 110 5 100 20
+LABEL label2 0 35 110 20 "X" left black default 
+TEXTENTRY entry2 110 35 100 20
+LABEL label3 0 65 110 20 "Y" left black default 
+TEXTENTRY entry3 110 65 100 20
+LABEL label4 0 95 110 20 "Width" left black default 
+TEXTENTRY entry4 110 95 100 20
+LABEL label5 0 125 110 20 "Height" left black default 
+TEXTENTRY entry5 110 125 100 20
+LABEL label6 0 155 110 20 "Action" left black default 
+TEXTENTRY entry6 110 155 100 20
+LABEL label8 0 215 110 20 "Tooltip" left black default 
+TEXTENTRY entry7 110 185 100 20
+TEXTBUTTON applyButton 20 245 60 20 "Subwindow_Actions.Apply_Properties_Dialog"  "Apply"
+TEXTBUTTON okbutton 90 245 60 20 "Subwindow_Actions.Done_Properties_Dialog"  "OK"
+TEXTBUTTON cancelButton 160 245 60 20 "Subwindow_Actions.Cancel_Properties_Dialog"  "Cancel"
+TEXTENTRY entry8 110 215 100 20
+LABEL label7 0 185 110 20 "Picture" left black default 
+ENDOF WIDGETS
+
+ENDOF WINDOW

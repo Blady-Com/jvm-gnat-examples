@@ -1,0 +1,17 @@
+WINDOW "menuedit" "Menu Editor"
+        392        336
+
+WIDGETS
+LISTBOX menu_display 2 2 273 326 FALSE TRUE black white 
+TEXTBUTTON insert_menu 300 10 71 25 "Menu_Edit.Insert_Menu"  "Insert Menu"
+TEXTBUTTON insert_choice 300 50 71 25 "Menu_Edit.Insert_Choice"  "Insert Choice"
+TEXTBUTTON Insert_Separator 300 90 71 25 "Menu_Edit.Insert_Separator"  "Separator"
+TEXTBUTTON delete 300 130 71 25 "Menu_Edit.Delete"  "Delete"
+TEXTBUTTON edit 300 170 71 25 "Menu_Edit.Edit_Item"  "Edit"
+TEXTBUTTON done 300 210 71 25 "Menu_Edit.Done_Edit"  "Done"
+LABEL item_insert 283 252 101 18 "For menus:" center black default 
+RADIOBUTTON inside 284 277 99 14 "Insert inside" "insert_group"
+RADIOBUTTON after 284 293 90 22 "Insert after" "insert_group"
+ENDOF WIDGETS
+
+ENDOF WINDOW

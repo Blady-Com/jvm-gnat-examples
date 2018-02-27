@@ -1,0 +1,48 @@
+WINDOW "main" "RAPID"
+        312        117
+
+MENUBAR
+MENU "File" 1
+ITEM "New" 1 "File_Menu.New_Choice" Ctrl+N
+ITEM "Open" 1 "File_Menu.Open_Choice" Ctrl+O
+ITEM "Close" 1 "File_Menu.Close_Choice" Ctrl+F4
+ITEM "Save" 1 "File_Menu.Save_Choice" Ctrl+S
+ITEM "Save As" 6 "File_Menu.SaveAs_Choice" 
+ITEM "Exit" 2 "File_Menu.Exit_Choice" 
+ENDOF MENU
+MENU "Edit" 1
+ITEM "Modify Window" 1 "Edit_Menu.Change_Window" 
+ITEM "Delete" 3 "Edit_Menu.Delete_Choice" Del
+ITEM "Duplicate" 3 "Edit_Menu.Duplicate_Choice" Ctrl+D
+ENDOF MENU
+MENU "Tools" 1
+ITEM "Compile" 1 "Tools_Menu.Compile_Choice" Ctrl+M
+ENDOF MENU
+MENU "Help" 1 "null"
+ITEM "About" 1 "Help_Menu.About" 
+ENDOF MENU
+ENDOF MENUBAR
+
+WIDGETS
+PICTUREBUTTON newButton 0 0 23 23 "File_Menu.New_Choice"  "new_gif.gif"  "New"
+PICTUREBUTTON openButton 23 0 23 23 "File_Menu.Open_Choice"  "open_gif.gif"  "Open"
+PICTUREBUTTON saveButton 46 0 23 23 "File_Menu.Save_Choice"  "save_gif.gif"  "Save"
+PICTUREBUTTON menubutton 79 0 23 23 "Subwindow_Actions.Edit_Menu"  "menu_gif.gif"  "Edit menus"
+PICTUREBUTTON cutButton 112 0 23 23 "Edit_Menu.Delete_Choice"  "cut_gif.gif"  "Cut"
+PICTUREBUTTON duplicatebutton 135 0 23 23 "Edit_Menu.Duplicate_Choice"  "copy_gif.gif"  "Duplicate"
+PICTUREBUTTON compileButton 168 0 23 23 "Tools_Menu.Compile_Choice"  "compile_gif.gif"  "Compile"
+PICTUREBUTTON labelButton 0 25 23 23 "Toolbar.Select_Widget"  "label_gif.gif"  "Text label"
+PICTUREBUTTON textBButton 23 25 23 23 "Toolbar.Select_Widget"  "text_button_gif.gif"  "Text button"
+PICTUREBUTTON pictureBButton 46 25 23 23 "Toolbar.Select_Widget"  "picture_button_gif.gif"  "Picture button"
+PICTUREBUTTON textEntryButton 69 25 23 23 "Toolbar.Select_Widget"  "text_entry_gif.gif"  "Text entry"
+PICTUREBUTTON check_button 92 25 23 23 "Toolbar.Select_Widget"  "check_gif.gif"  "Check button"
+PICTUREBUTTON radio_button 114 25 23 23 "Toolbar.Select_Widget"  "radio_button_gif.gif"  "Radio button"
+PICTUREBUTTON picture_select 136 25 23 23 "Toolbar.Select_Widget"  "picture_gif.gif"  "Picture"
+PICTUREBUTTON listboxButton 158 25 23 23 "toolbar.select_widget"  "listbox_gif.gif"  "Listbox"
+PICTUREBUTTON scaleButton 181 25 23 23 "Toolbar.Select_Widget"  "scale_button_gif.gif"  "Scale slider"
+PICTUREBUTTON progressbutton 204 25 23 23 "Toolbar.Select_Widget"  "progress_button_gif.gif"  "Progress bar"
+PICTUREBUTTON dropdownbutton 228 26 23 23 "Toolbar.Select_Widget"  "dropdown_button_gif.gif"  "Dropdown list"
+LABEL name 0 49 180 23 "No Window Open" left black default 
+ENDOF WIDGETS
+
+ENDOF WINDOW

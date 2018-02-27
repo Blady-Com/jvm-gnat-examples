@@ -1,0 +1,4 @@
+-I..\mcc_gui -I..\tcl_peer -Ic:\gnatpro\bindings\tash820a\src -I..\lib
+-LC:\gnatpro\bindings\tash820a\lib
+
+

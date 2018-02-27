@@ -1,0 +1,66 @@
+WINDOW "label_dialog" "Label Properties"
+        441        235
+
+WIDGETS
+LABEL label1 0 35 110 20 "Widget name" center Black default 
+TEXTENTRY entry1 110 35 100 20
+LABEL label2 0 65 110 20 "X" center Black default 
+TEXTENTRY entry2 110 65 100 20
+LABEL label3 0 95 110 20 "Y" center Black default 
+TEXTENTRY entry3 110 95 100 20
+LABEL label4 0 125 110 20 "Width" center Black default 
+TEXTENTRY entry4 110 125 100 20
+LABEL label5 0 155 110 20 "Height" center Black default 
+TEXTENTRY entry5 110 155 100 20
+LABEL label6 220 35 110 20 "Text" center Black default 
+TEXTENTRY entry6 330 35 100 20
+LABEL label7 220 65 110 20 "Justification" center Black default 
+TEXTENTRY entry7 331 65 100 20
+LABEL label8 220 95 110 20 "Foreground Color" center Black default 
+TEXTENTRY entry8 330 95 100 20
+LABEL label9 221 125 110 20 "Background Color" center Black default 
+TEXTENTRY entry9 330 125 100 20
+LABEL option1 3 5 207 20 "Label Options" center Black LightBlue 
+LABEL option2 220 5 210 20 "Text Options" center Black LightBlue 
+LABEL font_label 220 150 110 13 "Font: " left default default 
+TEXTBUTTON change_font 330 156 96 21 "Subwindow_Actions.Change_Font"  "Change Font"
+LABEL font_style 220 167 110 15 "Default" left default default 
+TEXTBUTTON applyButton 130 197 60 20 "Subwindow_Actions.Apply_Properties_Dialog"  "Apply"
+TEXTBUTTON okbutton 200 197 60 20 "Subwindow_Actions.Done_Properties_Dialog"  "OK"
+TEXTBUTTON cancelButton 270 197 60 20 "Subwindow_Actions.Cancel_Properties_Dialog"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW
+WINDOW "label_dialog" "Label Properties"
+        441        235
+
+WIDGETS
+LABEL label1 0 35 110 20 "Widget name" center Black default 
+TEXTENTRY entry1 110 35 100 20
+LABEL label2 0 65 110 20 "X" center Black default 
+TEXTENTRY entry2 110 65 100 20
+LABEL label3 0 95 110 20 "Y" center Black default 
+TEXTENTRY entry3 110 95 100 20
+LABEL label4 0 125 110 20 "Width" center Black default 
+TEXTENTRY entry4 110 125 100 20
+LABEL label5 0 155 110 20 "Height" center Black default 
+TEXTENTRY entry5 110 155 100 20
+LABEL label6 220 35 110 20 "Text" center Black default 
+TEXTENTRY entry6 330 35 100 20
+LABEL label7 220 65 110 20 "Justification" center Black default 
+TEXTENTRY entry7 331 65 100 20
+LABEL label8 220 95 110 20 "Foreground Color" center Black default 
+TEXTENTRY entry8 330 95 100 20
+LABEL label9 221 125 110 20 "Background Color" center Black default 
+TEXTENTRY entry9 330 125 100 20
+LABEL option1 3 5 207 20 "Label Options" center Black LightBlue 
+LABEL option2 220 5 210 20 "Text Options" center Black LightBlue 
+LABEL font_label 220 150 110 13 "Font: " left black default 
+TEXTBUTTON change_font 330 156 96 21 "Subwindow_Actions.Change_Font"  "Change Font"
+LABEL font_style 220 167 110 15 "Default" left black default 
+TEXTBUTTON applyButton 130 197 60 20 "Subwindow_Actions.Apply_Properties_Dialog"  "Apply"
+TEXTBUTTON okbutton 200 197 60 20 "Subwindow_Actions.Done_Properties_Dialog"  "OK"
+TEXTBUTTON cancelButton 270 197 60 20 "Subwindow_Actions.Cancel_Properties_Dialog"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW

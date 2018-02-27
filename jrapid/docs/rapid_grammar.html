@@ -1,0 +1,46 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin C. Carlisle">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win98; U) [Netscape]">
+   <title>RAPID GUI Grammar</title>
+</head>
+<body text="#000000" bgcolor="#C0C0FF" link="#0000FF" vlink="#800080" alink="#FF0080">
+
+<center><b><font size=+3>RAPID GUI Grammar</font></b></center>
+
+<p>Following is a portion of the LL(1) grammar for a GUI file.&nbsp; Only
+the picture button and text button widgets are shown but the others are
+similar.&nbsp; &lt;x> means that x is a non-terminal symbol.&nbsp; ABC
+means that abc is a terminal symbol.
+<p>&lt;name> is a string
+<br>&lt;action> is an Ada command surrounded by quotation marks
+<br>&lt;width>, &lt;height>, &lt;underline>, &lt;x>, &lt;y> are integers
+<br>&lt;picture> is the name of a GIF file
+<br>&lt;accel_key> is a string that represents a keyboard shortcut (e.g.
+Ctrl+X)
+<br>^ represents the empty string
+<p>&lt;window> is the starting symbol for the grammar.
+<p>&lt;window>&nbsp; ::= WINDOW &lt;name> &lt;width> &lt;height> &lt;menubar>
+&lt;widgets> ENDOF WINDOW
+<br>&lt;menubar>&nbsp; ::= MENUBAR &lt;menulist> ENDOF MENUBAR | ^
+<br>&lt;menulist>&nbsp; ::= MENU &lt;submenuinfo> &lt;menulist> ENDOF MENU
+| ITEM &lt;iteminfo> &lt;menulist> | ^
+<br>&lt;submenuinfo>&nbsp; ::= &lt;name> &lt;underline> &lt;possible_action>
+<br>&lt;possible_action> ::= &lt;action> | ^
+<br>&lt;iteminfo>&nbsp; ::= &lt;name> &lt;underline> &lt;action> &lt;accelerator>
+<br>&lt;accelerator> ::= &lt;accel_key> | ^
+<br>&lt;widgets> ::= WIDGETS &lt;widgetlist> ENDOF WIDGETS | ^
+<br>&lt;widgetlist> ::= &lt;widget> &lt;widgetlist> | ^
+<br>&lt;widget> ::= &lt;picturebutton>|&lt;textbutton>|…
+<br>&lt;picturebutton> ::= PICTUREBUTTON &lt;name> &lt;x> &lt;y> &lt;width>
+&lt;height> &lt;action> &lt;picture>
+<br>&lt;textbutton> ::= TEXTBUTTON &lt;name> &lt;x> &lt;y> &lt;width> &lt;height>
+&lt;action> &lt;font> &lt;text>
+<br>&lt;font> ::= ! &lt;family> &lt;style> &lt;size> | ^
+<br>&lt;family> ::= Sans_Serif|Serif|Monospaced
+<br>&lt;Style> ::= Bold|Bold_Italic|Italic|Plain
+<br>&lt;Size> ::= 8|9|10|...
+</body>
+</html>

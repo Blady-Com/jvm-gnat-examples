@@ -1,0 +1,44 @@
+WINDOW "picture_dialog" "Picture Properties"
+        230        217
+
+WIDGETS
+LABEL label1 0 5 110 20 "Widget name" 
+TEXTENTRY entry1 110 5 100 20 
+LABEL label2 0 35 110 20 "X" 
+TEXTENTRY entry2 110 35 100 20
+LABEL label3 0 65 110 20 "Y" 
+TEXTENTRY entry3 110 65 100 20
+LABEL label4 0 95 110 20 "Width" 
+TEXTENTRY entry4 110 95 100 20
+LABEL label5 0 125 110 20 "Height" 
+TEXTENTRY entry5 110 125 100 20
+LABEL label6 0 155 110 20 "Picture" 
+TEXTENTRY entry6 110 155 100 20
+TEXTBUTTON applyButton 20 185 60 20 "Subwindow_Actions.Apply_Properties_Dialog"  "Apply"
+TEXTBUTTON okbutton 90 185 60 20 "Subwindow_Actions.Done_Properties_Dialog"  "OK"
+TEXTBUTTON cancelButton 160 185 60 20 "Subwindow_Actions.Cancel_Properties_Dialog"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW
+WINDOW "picture_dialog" "Picture Properties"
+        230        217
+
+WIDGETS
+LABEL label1 0 5 110 20 "Widget name" left black default 
+TEXTENTRY entry1 110 5 100 20
+LABEL label2 0 35 110 20 "X" left black default 
+TEXTENTRY entry2 110 35 100 20
+LABEL label3 0 65 110 20 "Y" left black default 
+TEXTENTRY entry3 110 65 100 20
+LABEL label4 0 95 110 20 "Width" left black default 
+TEXTENTRY entry4 110 95 100 20
+LABEL label5 0 125 110 20 "Height" left black default 
+TEXTENTRY entry5 110 125 100 20
+LABEL label6 0 155 110 20 "Picture" left black default 
+TEXTENTRY entry6 110 155 100 20
+TEXTBUTTON applyButton 20 185 60 20 "Subwindow_Actions.Apply_Properties_Dialog"  "Apply"
+TEXTBUTTON okbutton 90 185 60 20 "Subwindow_Actions.Done_Properties_Dialog"  "OK"
+TEXTBUTTON cancelButton 160 185 60 20 "Subwindow_Actions.Cancel_Properties_Dialog"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW

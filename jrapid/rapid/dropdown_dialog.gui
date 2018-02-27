@@ -1,0 +1,28 @@
+WINDOW "dropdown_dialog" "Dropdown Properties"
+        440        208
+
+WIDGETS
+LABEL label1 0 35 110 20 "Widget name" center black default 
+TEXTENTRY entry1 110 35 100 20
+LABEL label2 0 65 110 20 "X" center black default 
+TEXTENTRY entry2 110 65 100 20
+LABEL label3 0 95 110 20 "Y" center black default 
+TEXTENTRY entry3 110 95 100 20
+LABEL label4 0 125 110 20 "Width" center black default 
+TEXTENTRY entry4 110 125 100 20
+LABEL label5 0 155 110 20 "Height" center black default 
+TEXTENTRY entry5 110 155 100 20
+LABEL label6 220 35 95 20 "Foreground Color" center black default 
+TEXTENTRY entry6 318 36 100 20
+LABEL label7 220 65 95 20 "Background Color" center black default 
+TEXTENTRY entry7 318 65 100 20
+LABEL label8 220 95 95 20 "Number of Rows" center black default 
+TEXTENTRY Row_Entry 318 95 100 20
+LABEL option1 3 5 207 20 "General Options" center black LightBlue 
+LABEL option2 220 5 210 20 "Dropdown Options" center black LightBlue 
+TEXTBUTTON applyButton 225 174 60 20 "Subwindow_Actions.Apply_Properties_Dialog"  "Apply"
+TEXTBUTTON okbutton 295 174 60 20 "Subwindow_Actions.Done_Properties_Dialog"  "OK"
+TEXTBUTTON cancelButton 365 174 60 20 "Subwindow_Actions.Cancel_Properties_Dialog"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW

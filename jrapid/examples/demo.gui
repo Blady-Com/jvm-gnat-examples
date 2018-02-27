@@ -1,0 +1,16 @@
+WINDOW "."
+        300        300
+
+MENUBAR
+MENU "Actions" 0 "null"
+ITEM "Action1" 6 "Actions.Action1" Ctrl+1
+ITEM "Action2" 6 "Actions.Action2" Ctrl+2
+ENDOF MENU
+ENDOF MENUBAR
+
+WIDGETS
+TEXTBUTTON action1 38 44 95 21 "Actions.action1"  "Action number 1"
+PICTUREBUTTON cut 50 89 53 20 "Actions.Action2"  "cut_gif.gif" 
+ENDOF WIDGETS
+
+ENDOF WINDOW

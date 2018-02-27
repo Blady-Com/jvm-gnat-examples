@@ -1,0 +1,196 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Martin C. Carlisle">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win98; U) [Netscape]">
+   <title>Rapid Users' Guide</title>
+</head>
+<body text="#000000" bgcolor="#C0C0FF" link="#0000FF" vlink="#800080" alink="#FF0080">
+
+<center><img SRC="rapid.gif" height=108 width=100 align=ABSCENTER><b><font size=+3>RAPID
+Users' Guide</font></b></center>
+
+<p><a href="ftp://ftp.usafa.af.mil/pub/dfcs/carlisle/usafa/rapid/index.html">RAPID</a>
+is the Rapid Ada Portable Interface Design Tool.&nbsp; It was originally
+implemented by&nbsp; <a href="http://www.usafa.af.mil/dfcs/bios/carlisle.html">Dr.
+Martin C. Carlisle</a> of the&nbsp; <a href="http://www.usafa.af.mil">United
+States Air Force Academy</a>&nbsp; <a href="http://www.usafa.af.mil/dfcs/index.html">Department
+of Computer Science</a>. Since its initial release in November 1998, several
+people have contributed to the design and implementation of the tool.&nbsp;
+In particular, RAPID 2.0 was made possible by significant contributions
+of W. Blair Watkinson II.&nbsp; Look under Help/About in RAPID for a list
+of contributors.
+<p>This page is intended to provide some basic information about using
+RAPID.&nbsp; It is often hard as the implementor to know what things will
+be unclear to users.&nbsp; If you have suggestions on how to improve this
+page, send them to:&nbsp;&nbsp; <a href="mailto:carlislem@acm.org">Martin
+Carlisle</a>
+<p>A good start is to look at the <a href="rapid_sigada98.ps">Original
+RAPID paper (postscript)</a> presented at SIGAda '98.&nbsp; This contains
+some basic information on how to use RAPID as well as more detailed information
+on the implementation.
+<p>Follow these links to:
+<br><a href="#starting">Starting RAPID</a>
+<br><a href="#using_widgets">Using the widgets</a>
+<br><a href="#editing">Editing the window</a>
+<br><a href="#menus">Working with menus</a>
+<br><a href="#main_program">Main program information</a>
+<br>&nbsp;
+<p><a NAME="starting"></a><b>Starting RAPID</b>
+<br>When you first open RAPID, you will see a window that looks like the
+following:
+<p><img SRC="rapid_startup.gif" height=163 width=321 align=CENTER>
+<br>&nbsp;
+<p>At this point, the user should either open an existing .gui file
+(using the open file button or menu choice) or
+create a new one (using the new button or menu choice).&nbsp;
+For each application develped using RAPID, the
+user should name exactly one window "main".&nbsp; The main window is the
+controlling window for the application, and when this window is closed,
+the application will exit.  The name of a window is changed using
+the Modify Window choice from the Edit menu.  When you create a new window,
+the dialog will ask for a window name.
+<p>Alternatively, you can specify the name of a .gui file on the command
+line (or even set it so that RAPID opens when you double-click on a .GUI
+file in some windowing systems, including Win 95/98/NT).  This feature is
+NOT implemented in the JVM version.
+<p><a NAME="using_widgets"></a><b>Using the widgets</b>
+<p>All of the following widgets are selectable on the toolbar.&nbsp; Push
+a button to select which kind of widget to create.  (Note on the JVM
+version the button does not seem to stay depressed, but instead the button
+that is drawn without a border indicates which type of widget is
+currently selected).
+Then in the window below, while holding down the left mouse button, draw
+a rectangle where you want the widget to appear.  The size and location
+of this rectangle will be the size and location of the new widget.
+&nbsp; Following
+this, a dialog will appear asking you to fill in properties for the widget.&nbsp;
+You must fill in all of the properties.  If you do not, and press ok or
+apply, you will hear a
+beep and the cursor will move to an invalid property.
+Each widget must have a name.&nbsp; To pick a name, follow the rules for
+Ada identifiers.&nbsp; Most widgets have helpful procedures/functions in
+the Mcc.Gui packages.
+<p>After a widget has been drawn, you can click and drag it to move it.&nbsp;
+Also, if you click it, resizing buttons will appear.&nbsp; Finally, right-clicking
+the widget reopens the properties dialog for that widget.&nbsp; Some widgets
+also have the ability to select a font.&nbsp; In this case, there will
+be a change font button that brings up a dialog like the following.&nbsp;
+You may either select a font, or choose "select default" and allow the
+GUI to use the standard font for that widget.
+<br><img SRC="font_selection.JPG" height=198 width=265>
+<p>Following are the widgets currently supported in RAPID:
+<p><img SRC="label_gif.gif" height=23 width=23> Text label.&nbsp; This
+has text, justification (left, right or center), foreground color and background
+color.&nbsp; For colors, you may enter the name of a common color (e.g.
+"red").&nbsp; These are found in Mcc.Gui.Colors.&nbsp; It should be relatively
+straight-forward to add other colors to the enumeration type (this requires
+recompiling RAPID).&nbsp; You may also type "default", which yields default
+behavior.
+<br><img SRC="text_button_gif.gif" height=23 width=23> Text button.&nbsp;
+This has text and an action.&nbsp; An action is any Ada code that would
+be valid inside a begin/end block.&nbsp; If it begins with an identifier,
+an appropriate "with" clause will be generated for the first identifier
+if it is fully qualified (i.e., if you specify "File_Menu.New_Choice" as
+an action, a "with" clause for File_Menu will be generated automatically).
+<br><img SRC="picture_button_gif.gif" height=23 width=23> Picture button.&nbsp;
+Same as above, but instead of text, has a picture (which should be the
+name of a GIF file).&nbsp; Additionally, the user can specify a tooltip,
+which will appear after the mouse has rested over the button for a brief
+period of time.
+<br><img SRC="text_entry_gif.gif" height=23 width=23> Single line text
+entry.&nbsp; This has an action which is performed when the user presses
+enter.&nbsp; See Text button for a discussion of actions.
+<br><img SRC="check_gif.gif" height=23 width=23> Check button.&nbsp; Allows
+the user to turn on/off the check button.&nbsp; Has a text label.
+<br><img SRC="radio_button_gif.gif" height=23 width=23> Radio button--
+the radio button is unique among widgets as it comes in groups.&nbsp; Only
+1 radio button may be selected at a time.&nbsp; The user must enter the
+group name along with the widget name.
+<br><img SRC="listbox_gif.gif" height=22 width=23> Listbox with optional
+scrollbars.&nbsp; A list of items.&nbsp; User can select foreground color
+and background color.&nbsp; Also can select whether or not to have a vertical
+or horizontal scrollbar.&nbsp; Add and delete entries from the listbox
+(or query which is selected) using the utilities in Mcc.Gui.Widget.Listbox.&nbsp;
+If an invalid color is chosen, you will be prompted to reenter.
+<br><img SRC="scale_button_gif.gif" height=23 width=23> Scale widget.&nbsp;
+Creates a slider which is used to enter a value from a discrete range.
+<br><img SRC="progress_button_gif.gif" height=23 width=23> Progress bar.&nbsp;
+Used to mark progress of an operation (between 0.0 and 1.0).&nbsp; User
+can select foreground color and background color (see Text label for a
+discussion of colors).&nbsp; If an invalid color is chosen, you will be
+prompted to reenter.
+<br><img SRC="dropdown_button_gif.gif" height=23 width=23> Dropdown list.&nbsp;
+Used to select from a list of items when real estate is sparse (list only
+appears when button is pushed).&nbsp; User can select foreground color
+and background color (see Text label for a discussion of colors).&nbsp;
+Also can specify how many rows will appear when list is displayed.&nbsp;
+Add and delete items from the list (or query which is selected) using utilities
+in Mcc.Gui.Widget.Dropdown.
+<p><a NAME="editing"></a><b>Editing the window</b>
+<br>With a window open, you can not only create new widgets by clicking
+and dragging, and can also perform the following actions:
+<ul>
+<li>
+Select a widget by clicking on it.&nbsp; Use Ctrl + left mouse to select
+multiple.</li>
+
+<li>
+With a single widget selected, use the 9 handles to resize</li>
+
+<li>
+Move a single widget or multiple widgets in lock-step by clicking and dragging
+it (them)</li>
+
+<li>
+Delete all selected widgets using Del, the cut button, or the menu choice</li>
+
+<li>
+Resize the window by clicking and dragging the black rectangle in the lower
+right corner.</li>
+</ul>
+
+<p><br><a NAME="menus"></a><b>Working with menus</b>
+<br>If you push the "Menu" button, you will see a screen like the following:
+<br><img SRC="menu_editing.gif" height=329 width=400>
+<p>From this screen, you can add submenus (followed by "*") or choices.&nbsp;
+In the bottom right corner, we select whether to insert inside the menu
+as its first entry, or after the menu if a we insert when a menu is highlighted.&nbsp;
+Insertions always occur after the highlighted entry.&nbsp; The MENUBAR
+entry is a dummy entry that allows you to insert before the first menu.
+<p>If we insert, we get a dialog with the properties.&nbsp; The user must
+enter the name of the menu (what is displayed), its action (Ada code--
+see the discussion of Text buttons in&nbsp; <a href="#using_widgets">Using
+the widgets</a>&nbsp; above), an underline position (which character is
+underlined, use 0 for no underline, 1 to underline the first character,
+2 for the second, etc.), and a shortcut.&nbsp; Shortcuts should like "Ctrl+X",
+to indicate that Ctrl+X also activates this menu item.
+<p>Once finished, push "Done" and you will see the menu above the editing
+area.
+<p><a NAME="main_program"></a><b>Main program</b>
+<p>The compile button generates Ada code to implement the designed GUI.&nbsp;
+Note this compiles the GUI to Ada-- it does not compile the Ada.  If your
+window is called "hello_world", then "hello_world_window.ads" and
+"hello_world_window.adb" will be created.  Recall you MUST have one
+window named "main" (which, when compiled, yields "main_window.ads" and
+"main_window.adb").
+Then, the user must write the rest of the program, including a main program,
+which should look like the following:
+<p><tt>with Main_Window;</tt>
+<br><tt>with Mcc.Gui.Container_Window;</tt>
+<p><tt>procedure Demo is</tt>
+<p><tt>begin</tt>
+<br><tt>&nbsp;&nbsp; Main_Window.Generate_Window;</tt>
+<br><tt>&nbsp;&nbsp; Mcc.Gui.Container.Window.Event_Loop;</tt>
+<br><tt>end Demo;</tt>
+<p>Each window is then opened by calling its Generate_Window procedure.&nbsp;
+Callbacks occur when buttons are pushed, menu items selected, etc.&nbsp;
+See&nbsp; <a href="#using_widgets">Using the widgets</a> above for more
+information.
+<p>The packages in the Mcc.Gui hierarchy contain useful functions for interacting
+with RAPID generated widgets.&nbsp; For example, Mcc.Gui.Widget.Text_Entry
+contains methods for setting and reading the text entry, among others.
+<br>&nbsp;
+</body>
+</html>

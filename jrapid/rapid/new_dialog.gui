@@ -1,0 +1,32 @@
+WINDOW "new_dialog" "New Window Properties"
+        230        165
+
+WIDGETS
+LABEL label1 0 5 110 20 "Window name" left default default 
+TEXTENTRY entry1 110 5 100 20 
+LABEL title_label 0 35 110 20 "Title" left default default 
+TEXTENTRY entry4 110 35 100 20
+LABEL label2 0 65 110 20 "Width" left default default 
+TEXTENTRY entry2 110 65 100 20
+LABEL label3 0 95 110 20 "Height" left default default 
+TEXTENTRY entry3 110 95 100 20
+TEXTBUTTON okbutton 85 125 60 20 "File_Menu.New_Done"  "OK"
+ENDOF WIDGETS
+
+ENDOF WINDOW
+WINDOW "new_dialog" "New Window Properties"
+        230        165
+
+WIDGETS
+LABEL label1 0 5 110 20 "Window name" left black default 
+TEXTENTRY entry1 110 5 100 20
+LABEL title_label 0 35 110 20 "Title" left black default 
+TEXTENTRY entry4 110 35 100 20
+LABEL label2 0 65 110 20 "Width" left black default 
+TEXTENTRY entry2 110 65 100 20
+LABEL label3 0 95 110 20 "Height" left black default 
+TEXTENTRY entry3 110 95 100 20
+TEXTBUTTON okbutton 85 125 60 20 "File_Menu.New_Done"  "OK"
+ENDOF WIDGETS
+
+ENDOF WINDOW

@@ -1,0 +1,34 @@
+WINDOW "menuitem_dialog" "Menu Item Properties"
+        230        157
+
+WIDGETS
+LABEL label1 0 5 110 20 "Item name" 
+TEXTENTRY entry1 110 5 100 20 
+LABEL label2 0 35 110 20 "Underline position" 
+TEXTENTRY entry2 110 35 100 20
+LABEL label3 0 65 110 20 "Action" 
+TEXTENTRY entry3 110 65 100 20
+LABEL label4 0 95 110 20 "Accelerator" 
+TEXTENTRY entry4 110 95 100 20 
+TEXTBUTTON okbutton 33 125 60 20 "Menu_Edit.Done_Insert_Dialog"  "OK"
+TEXTBUTTON cancelbutton 125 125 60 20 "Menu_Edit.Cancel_Insert_Dialog"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW
+WINDOW "menuitem_dialog" "Menu Item Properties"
+        230        157
+
+WIDGETS
+LABEL label1 0 5 110 20 "Item name" left black default 
+TEXTENTRY entry1 110 5 100 20
+LABEL label2 0 35 110 20 "Underline position" left black default 
+TEXTENTRY entry2 110 35 100 20
+LABEL label3 0 65 110 20 "Action" left black default 
+TEXTENTRY entry3 110 65 100 20
+LABEL label4 0 95 110 20 "Accelerator" left black default 
+TEXTENTRY entry4 110 95 100 20
+TEXTBUTTON okbutton 33 125 60 20 "Menu_Edit.Done_Insert_Dialog"  "OK"
+TEXTBUTTON cancelbutton 125 125 60 20 "Menu_Edit.Cancel_Insert_Dialog"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW

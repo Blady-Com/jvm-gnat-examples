@@ -1,0 +1,18 @@
+WINDOW "change_window_dialog" "Change Window Properties"
+        230        165
+
+WIDGETS
+LABEL label1 0 5 110 20 "Window name" left black default 
+TEXTENTRY entry1 110 5 100 20
+LABEL title_label 0 35 110 20 "Title" left black default 
+TEXTENTRY entry4 110 35 100 20
+LABEL label2 0 65 110 20 "Width" left black default 
+TEXTENTRY entry2 110 65 100 20
+LABEL label3 0 95 110 20 "Height" left black default 
+TEXTENTRY entry3 110 95 100 20
+TEXTBUTTON applyButton 20 125 60 20 ! SERIF 10 PLAIN "Edit_Menu.Apply_Changes"  "Apply"
+TEXTBUTTON okbutton 90 125 60 20 ! SERIF 10 PLAIN "Edit_Menu.Change_Done"  "OK"
+TEXTBUTTON cancelButton 160 125 60 20 ! SERIF 10 PLAIN "Edit_Menu.Cancel_Changes"  "Cancel"
+ENDOF WIDGETS
+
+ENDOF WINDOW

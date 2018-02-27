@@ -1,0 +1,16 @@
+WINDOW "font_selection_dialog" "Select Font"
+        257        171
+
+WIDGETS
+TEXTBUTTON defaultButton 18 127 90 22 "Font_Actions.Default_Font"  "Select Default"
+TEXTBUTTON okbutton 118 128 45 20 "Font_Actions.Ok_Pressed"  "OK"
+TEXTBUTTON cancelButton 174 128 60 20 "Font_Actions.Cancel_Dialog"  "Cancel"
+LISTBOX family_box 14 24 78 80 FALSE FALSE default white 
+LISTBOX style_box 102 24 78 80 FALSE FALSE default white 
+LISTBOX size_box 192 24 51 81 FALSE TRUE default white 
+LABEL family_label 17 7 74 17 "Family" left black default 
+LABEL style_label 103 7 74 17 "Style" left black default 
+LABEL size_label 191 7 35 17 "Size" left black default 
+ENDOF WIDGETS
+
+ENDOF WINDOW
