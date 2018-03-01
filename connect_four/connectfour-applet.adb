@@ -62,7 +62,7 @@ with Java.Awt.Component;
 --   See the Makefile provided in the directory for this demo
 --   for specific details on how to create and run the applet.
 
-package body Connectfour is
+package body Connectfour.Applet is
    ------------------------
    -- Local Types & Data --
    ------------------------
@@ -1252,4 +1252,4 @@ Title_Offset,
       null;
    end Mouseexited;
 
-end Connectfour;
+end Connectfour.Applet;

@@ -8,10 +8,10 @@ all : force
 build : connectfour.jar
 
 connectfour.jar :
-	jvm-gnatmake -I${API} connectfour
-	jvm-gnatbind -n -I${API} connectfour.ali
-	jvm-gnatlink connectfour.ali
-	jarmake -o $@ connectfour\$$typ.class
+	jvm-gnatmake -Pconnectfour
+	jvm-gnat bind -Pconnectfour connectfour.ali
+	jvm-gnat link -Pconnectfour connectfour.ali
+	jarmake -o $@ connectfour\$$applet\$$typ.class
 
 run : build
 	appletviewer -J-Djava.security.policy=file.pol test.html
