@@ -6,7 +6,7 @@ with Java.Applet.Applet;  use Java.Applet.Applet;
 with Java.Awt.Graphics;   use Java.Awt.Graphics;
 with Java.Net.URL;
 
-package body Animate is
+package body Animate.Applet is
 
    ------------------------
    -- Local Types & Data --
@@ -202,4 +202,4 @@ package body Animate is
       end loop;
    end Animation_Typ;
 
-end Animate;
+end Animate.Applet;

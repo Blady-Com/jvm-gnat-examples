@@ -1,0 +1,9 @@
+*.ali
+*.class
+*.jar
+b~*.ad?
+gnatinspect.db
+gnatinspect.db-shm
+gnatinspect.db-wal
+gpsauto.cgpr
+*-loc.xml

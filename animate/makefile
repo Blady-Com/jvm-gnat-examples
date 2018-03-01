@@ -8,10 +8,10 @@ all : force
 build : animate.jar
 
 animate.jar :
-	jvm-gnatmake -I${API} animate 
-	jvm-gnatbind -n -I${API} animate.ali
-	jvm-gnatlink animate.ali
-	jarmake -o $@ animate\$$typ.class
+	jvm-gnatmake -Panimate.gpr
+	jvm-gnat bind -Panimate.gpr animate.ali
+	jvm-gnat link -Panimate.gpr animate.ali
+	jarmake -o $@ animate\$$applet\$$typ.class
 
 run : build
 	appletviewer -J-Djava.security.policy=file.pol test.html
