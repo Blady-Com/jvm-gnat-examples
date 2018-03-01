@@ -1,13 +1,15 @@
+JGNAT_JAR=$(dir $(shell which jvm-gnatls))../lib/jgnat.jar
+
 all:
 	@echo type \"make run\" to run the example
 
-main.class : 
+main.class :
 	jvm-gnatmake  main
 
 build : main.class
 
 run : build
-	java main
+	java -classpath $(JGNAT_JAR):. main
 
 clean :
 	${RM} *~ *.ali b~* CVS

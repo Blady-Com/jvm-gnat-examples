@@ -1,3 +1,4 @@
+JGNAT_JAR=$(dir $(shell which jvm-gnatls))../lib/jgnat.jar
 
 all:
 	@echo "Type \"make run\" to run the example"
@@ -12,7 +13,7 @@ prime.class: prime.adb
 build : prime.class simple_io.class
 
 run: build
-	java prime
+	java -classpath $(JGNAT_JAR):. prime
 
 clean:
 	${RM} *~ *.ali b~* CVS

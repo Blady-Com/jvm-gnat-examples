@@ -1,3 +1,4 @@
+JGNAT_JAR=$(dir $(shell which jvm-gnatls))../lib/jgnat.jar
 
 all:
 	@echo "Type \"make run\" to run the example"
@@ -8,7 +9,7 @@ qs.class :
 build: qs.class
 
 run: build
-	java qs
+	java -classpath $(JGNAT_JAR):. qs
 
 clean:
 	${RM} *~ *.ali b~* CVS
