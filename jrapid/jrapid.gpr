@@ -1,0 +1,19 @@
+with "java_api.gpr";
+
+project JRapid is
+
+   for Source_Dirs use ("mcc_gui", "jvm_peer", "lib", "rapid");
+   for Object_Dir use "classes";
+   for Exec_Dir use "classes";
+   for Languages use ("Ada");
+
+   for Main use ("rapid.adb");
+
+   package IDE is
+      for Compiler_Command ("ada") use "jvm-gnatmake";
+      for Gnatlist use "jvm-gnatls";
+      for Gnat use "jvm-gnat";
+   end IDE;
+
+end JRapid;
+

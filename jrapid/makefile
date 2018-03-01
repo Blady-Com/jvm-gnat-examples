@@ -6,8 +6,8 @@ all : force
 	@echo "Type \"make run\" to run jrapid"
 
 classes/jrapid.jar :
+	jvm-gnatmake -Pjrapid.gpr
 	( cd classes ;                                                              \
-	  jvm-gnatmake -gnatf -I../mcc_gui -I../jvm_peer -I../lib -I../rapid -I${API} rapid && \
 	  jarmake -o jrapid.jar META-INF/MANIFEST.MF rapid.class *.gif *.gui )
 
 build : classes/jrapid.jar
