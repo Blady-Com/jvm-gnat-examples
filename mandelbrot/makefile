@@ -1,3 +1,4 @@
+JGNAT_JAR=$(dir $(shell which jvm-gnatls))../lib/jgnat.jar
 
 API=/usr/local/gnat/lib/jre
 
@@ -6,7 +7,7 @@ all:
 	@echo "Type \"make run\" to run the example"
 
 mandelbrot.class : mandelbrot.adb gui.adb
-	jvm-gnatmake mandelbrot -I${API} 
+	jvm-gnatmake -Pmandelbrot.gpr
 
 wait.class : wait.java
 	javac wait.java
@@ -20,9 +21,9 @@ run: build
 	@echo To properly see this application, once the window appears with
 	@echo the COMPUTE button, and before clicking on the COMPUTE button,
 	@echo enlarge the window to a full window by clicking on the enlarge
-	@echo window button on the top right hand side of the window. 
+	@echo window button on the top right hand side of the window.
 	@echo
-	java mandelbrot
+	java -classpath $(JGNAT_JAR):. mandelbrot
 
 clean:
 	${RM} *.ali b~* *~ CVS

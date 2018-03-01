@@ -1,0 +1,19 @@
+with "java_api.gpr";
+
+project Mandelbrot is
+
+   for Source_Dirs use (".");
+   for Object_Dir use ".";
+   for Exec_Dir use ".";
+   for Languages use ("Ada");
+
+   for Main use ("mandelbrot.adb");
+
+   package IDE is
+      for Compiler_Command ("ada") use "jvm-gnatmake";
+      for Gnatlist use "jvm-gnatls";
+      for Gnat use "jvm-gnat";
+   end IDE;
+
+end Mandelbrot;
+
