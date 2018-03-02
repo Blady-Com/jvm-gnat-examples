@@ -2,7 +2,6 @@ RM   = rm -rf
 ECHO = echo
 
 EXAMPLES = \
- java-API     \
  acvc         \
  animate      \
  connect_four \
@@ -10,7 +9,7 @@ EXAMPLES = \
  jrapid       \
  mandelbrot   \
  philosophers \
- prime	      \
+ prime        \
  quicksort    \
  text_io      \
  tictactoe    \
