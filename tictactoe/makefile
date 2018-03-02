@@ -6,10 +6,10 @@ all : force
 	@echo "Type \"make run\" to run the example"
 
 tictactoe.jar :
-	jvm-gnatmake -I${API} tictactoe
-	jvm-gnatbind -n -I${API} tictactoe.ali
-	jvm-gnatlink tictactoe.ali
-	jarmake -o $@ tictactoe\$$typ.class
+	jvm-gnatmake -Ptictactoe.gpr
+	jvm-gnat bind -Ptictactoe.gpr tictactoe.ali
+	jvm-gnat link -Ptictactoe.gpr tictactoe.ali
+	jarmake -o $@ tictactoe\$$applet\$$typ.class
 
 build : tictactoe.jar
 

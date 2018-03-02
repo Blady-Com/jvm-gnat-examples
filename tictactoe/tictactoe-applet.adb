@@ -16,7 +16,7 @@ with Java.Awt.Dimension;
 with Java.Awt.Graphics;   use Java.Awt.Graphics;
 with Java.Net.URL;
 
-package body TicTacToe is
+package body TicTacToe.Applet is
 
    ------------
    -- Is_Won --
@@ -339,4 +339,4 @@ package body TicTacToe is
       null;
    end MousePressed;
 
-end TicTacToe;
+end TicTacToe.Applet;
