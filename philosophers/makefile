@@ -6,11 +6,10 @@ all : force
 	@echo "Type \"make run\" to run the example"
 
 philosophers.jar :
-	jvm-gnatmake -I${API} philosophers
-	jvm-gnatbind -n -I${API} philosophers.ali
-	jvm-gnatlink philosophers.ali
-#	jarmake -j -L$(API)/rt-1.2.2.jar -o $@ philosophers\$$typ.class
-	jarmake -o $@ philosophers\$$typ.class
+	jvm-gnatmake -Pphilosophers.gpr
+	jvm-gnat bind -Pphilosophers.gpr philosophers.ali
+	jvm-gnat link -Pphilosophers.gpr philosophers.ali
+	jarmake -o $@ philosophers\$$applet\$$typ.class
 
 build : philosophers.jar
 

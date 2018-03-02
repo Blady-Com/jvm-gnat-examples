@@ -5,7 +5,7 @@ with java.awt.Rectangle;                use java.awt.Rectangle;
 with java.awt.Graphics;                 use java.awt.Graphics;
 with java.awt.Color;                    use java.awt.Color;
 
-package body Philosophers is
+package body Philosophers.Applet is
 
    function Random return Integer;
    function Total (This : access Typ) return Integer;
@@ -212,4 +212,4 @@ package body Philosophers is
       end loop;
    end Paint;
 
-end Philosophers;
+end Philosophers.Applet;
