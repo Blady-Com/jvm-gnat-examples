@@ -1,6 +1,6 @@
 # JVM-GNAT Examples
 
-JVM-GNAT is the Ada developpement environment for the Java Virtual Machine. From Ada source code, the compiler generate ByteCode class files compatible with Java Runtime Environment 1.5.
+JVM-GNAT is the Ada development environment for the Java Virtual Machine. From Ada source code, the compiler generate ByteCode class files compatible with Java Runtime Environment 1.5.
 
 All JVM-GNAT examples are updated for JVM-GNAT GPL 2013, though some compiler issues may appear with JRapid and Mandelbrot programs and all applet executions issue an error "java.lang.NullPointerException", see status below.
 
